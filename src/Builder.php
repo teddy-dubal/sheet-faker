@@ -28,14 +28,19 @@ class Builder
      * Make a new Generator instance.
      *
      * @param string $format
+     * @param string $locale
      * @param int    $rows
      * @param array  $columns
      * 
      * @return \SheetFaker\Generator
      */
-    public function make($format, $rows = null, $columns = null)
+    public function make($format, $locale = null, $rows = null, $columns = null)
     {
         date_default_timezone_set(@date_default_timezone_get());
+
+        if (!$locale) {
+            $locale = 'en_US';
+        }
 
         if (!$rows) {
             $rows = 10;
@@ -47,7 +52,7 @@ class Builder
             $columns = explode(',', $columns);
         }
 
-        $faker = Factory::create();
+        $faker = Factory::create($locale);
         $writer = $this->writerFromFormat($format);
 
         return (new Generator($this->output, $writer, $faker))

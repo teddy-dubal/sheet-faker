@@ -36,6 +36,12 @@ class GenerateCommand extends Command
                 'Fully qualified path to output file.'
             )
             ->addOption(
+                'locale',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'Locale for data generation, default en_US. (see http://bit.ly/1NTquJb)'
+            )
+            ->addOption(
                 'columns',
                 null,
                 InputOption::VALUE_OPTIONAL,
@@ -75,7 +81,7 @@ class GenerateCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         list($command, $format, $path) = array_values($input->getArguments());
-        list($columns, $rows) = array_values($input->getOptions());
+        list($locale, $columns, $rows) = array_values($input->getOptions());
 
         if (!$path) {
             $path = $this->makePath($format);
@@ -83,7 +89,7 @@ class GenerateCommand extends Command
 
         $output = new SymfonyStyle($input, $output);
 
-        $generator = (new Builder($output))->make($format, $rows, $columns);
+        $generator = (new Builder($output))->make($format, $locale, $rows, $columns);
         $generator->generate($path);
     }
 }
