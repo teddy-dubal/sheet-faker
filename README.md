@@ -1,7 +1,7 @@
 #Sheet Faker
-As it says on the tin, Sheet Faker allows you to efficiently create large CSV, ODS & XLSX files containing fake data for testing purposes.
+As it says on the tin, Sheet Faker allows you to efficiently create large CSV, ODS & XLSX files containing fake / test data.
 
-Credit to [Faker](https://github.com/fzaninotto/Faker) package which is used to generate the data and [Box's Sprout](https://github.com/box/spout) to create the files.
+Credit to the [Faker](https://github.com/fzaninotto/Faker) package which is used to generate the data and [Box's Sprout](https://github.com/box/spout) to create the files.
 
 ## Usage
     # Clone the repo (or download a zipball):
@@ -14,11 +14,12 @@ Credit to [Faker](https://github.com/fzaninotto/Faker) package which is used to 
 
     # Run
     ./faker generate format path --rows=n --columns=formatter1,formatter2,formatter3
-    
+Not got composer  installed? See [here](https://getcomposer.org/doc/00-intro.md).
+
 ## Arguments & Options
 - format - CSV, ODS or XLSX
 - path   - Fully qualified writable path to save the file.
-- --locale - The desired locale of the test date see [here](http://bit.ly/1NTquJb) for a list of available locales.
+- --locale - The desired locale of the test data see [here](http://bit.ly/1NTquJb) for a list of available locales.
 - --rows - The number of rows to generate.
 - --columns - A comma separated list of columns specified using Faker formatter names see [here](http://bit.ly/1NyNeUH) for a full list of possible data types.
 
