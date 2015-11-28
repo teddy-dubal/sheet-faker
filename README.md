@@ -4,16 +4,14 @@ As it says on the tin, Sheet Faker allows you to efficiently create large CSV, O
 Credit to the [Faker](https://github.com/fzaninotto/Faker) package which is used to generate the data and [Box's Sprout](https://github.com/box/spout) to create the files.
 
 ## Usage
-    # Clone the repo (or download a zipball):
-    git clone https://github.com/olsgreen/sheet-faker
-
+    # Install via composer
+    composer create-project olsgreen/sheet-faker
+    
     cd sheet-faker
 
-    # Install via composer
-    composer install
-
     # Run
-    ./faker generate format path --rows=n --columns=formatter1,formatter2,formatter3
+    ./faker generate csv
+
 Not got composer  installed? See [here](https://getcomposer.org/doc/00-intro.md).
 
 ## Arguments & Options
