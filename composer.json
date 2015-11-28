@@ -2,7 +2,7 @@
     "name": "olsgreen/sheet-faker",
     "description": "CSV / XLS / ODS dummy data generator.",
     "keywords": ["csv", "xls", "ods", "dummy", "test", "seeder", "fake", "data"],
-    "license": "GPL",
+    "license": "MIT",
     "type": "project",
     "require": {
         "php": ">=5.5.9",
