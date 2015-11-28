@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+include('vendor/autoload.php');
+
+use SheetFaker\Command\GreetCommand;
+use SheetFaker\Command\GenerateCommand;
+use Symfony\Component\Console\Application;
+
+define('SF_BASE_PATH', __DIR__);
+
+$console = new Application();
+$console->add(new GenerateCommand);
+$console->run();

@@ -1,0 +1,28 @@
+{
+    "name": "olsgreen/sheet-faker",
+    "description": "CSV / XLS / ODS dummy data generator.",
+    "keywords": ["csv", "xls", "ods", "dummy", "test", "seeder", "fake", "data"],
+    "license": "GPL",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/console": "~2.7",
+        "fzaninotto/faker": "~1.4",
+        "box/spout": "~2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SheetFaker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
